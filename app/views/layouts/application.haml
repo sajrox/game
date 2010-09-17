@@ -8,8 +8,8 @@
     %body
         %div.navigation
             - unless is_authorization?
-                %a{:href => '/auth/login'} ZALOGUJ SIĘ
-                %a{:href => '/auth/register'} ZAREJESTRUJ SIĘ
+                %a{:href => '/auth/login'} LOGOWANIE
+                %a{:href => '/auth/register'} REJESTRACJA
             - else
                 %a{:href => '/members/logout'} WYLOGUJ SIĘ
         %hr
