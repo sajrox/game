@@ -1,0 +1,21 @@
+<h1>Listing fighters</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @fighters.each do |fighter| %>
+  <tr>
+    <td><%= link_to 'Show', fighter %></td>
+    <td><%= link_to 'Edit', edit_fighter_path(fighter) %></td>
+    <td><%= link_to 'Destroy', fighter, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Fighter', new_fighter_path %>

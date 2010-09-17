@@ -1,0 +1,15 @@
+.errors
+    - unless @errors.nil?
+        - @errors.each do |msg|
+            = msg
+
+= form_for @member, :url => 'login' do |f|
+    .group
+        .label= f.label "Login:"
+        .field= f.text_field :login
+
+    .group
+        .label= f.label "Hasło:"
+        .field= f.password_field :password
+
+    .button= f.submit
