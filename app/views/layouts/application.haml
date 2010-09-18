@@ -7,11 +7,12 @@
         = csrf_meta_tag
     %body
         %div.navigation
+            %a{:href => '/'} STRONA GŁÓWNA
             - unless is_authorization?
-                %a{:href => '/auth/login'} LOGOWANIE
-                %a{:href => '/auth/register'} REJESTRACJA
+                %a{:href => '/auth/signin'}  | LOGOWANIE
+                %a{:href => '/auth/signup'}  | REJESTRACJA
             - else
-                %a{:href => '/members/logout'} WYLOGUJ SIĘ
+                %a{:href => '/auth/signout'} | WYLOGUJ SIĘ
         %hr
         %br
         = yield

@@ -2,9 +2,12 @@ Game::Application.routes.draw do
 
   root :to => 'index#index'
 
-  match 'auth/:action' => 'auth'
+  match 'auth/signin' => 'auth#signin'
+  match 'auth/signup' => 'auth#signup'
+  match 'auth/signout' => 'auth#signout'
+  
   match 'members/profile' => 'members#profile'
-  match 'members/logout' => 'members#logout'
+  
 
 
   # The priority is based upon order of creation:
